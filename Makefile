@@ -10,16 +10,16 @@ NAME	=		push_swap
 
 all: 			${NAME}
 
-server: 		server.o
-				$(CC) -Lft_printf -lftprintf -o $@ $^
+# server: 		server.o
+# 				$(CC) -Lft_printf -lftprintf -o $@ $^
 
-client:			client.o
-				$(CC) -Lft_printf -lftprintf -o $@ $^ 
+# client:			client.o
+# 				$(CC) -Lft_printf -lftprintf -o $@ $^ 
 
-%.o: 			%.c
-				$(CC) $? -c $(CFLAGS)
+# %.o: 			%.c
+# 				$(CC) $? -c $(CFLAGS)
 
-${NAME}:		ft_printf/libftprintf.a server client 
+# ${NAME}:		ft_printf/libftprintf.a server client 
 
 ft_printf/libftprintf.a:
 				@make -C ft_printf
