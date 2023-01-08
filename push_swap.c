@@ -21,7 +21,7 @@ int main(int ac, char **av)
             return (NULL);
         while (index < (ac - 1))
         {
-            
+            a[index] = ft_atoi()
         }
     }
 }
