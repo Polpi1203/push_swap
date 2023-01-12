@@ -16,5 +16,7 @@ int		*func_ra(int array_a[], int size);
 int		*func_rb(int array_b[], int size);
 void	func_rr(int array_a[], int array_b[], int size);
 int     count_space(char *str);
+int	    forget_max(int a[]);
+int	    forget_min(int a[]);
 
 #endif
