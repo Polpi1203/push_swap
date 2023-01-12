@@ -1,37 +1,26 @@
-SRCS	= 		$(wildcard *.c)
+NAME = push_swap
 
-OBJS	= 		$(SRCS:.c=.o)
+CC = gcc
 
-CC		= 		gcc
+FLAGS = -Wall -Wextra -Werror -Lft_printf
 
-CFLAGS	= 		-Wall -Wextra -Werror -g
+SOURCES = push_swap.c \
+			funcRotate.c \
+			funcSwap.c \
+			tools.c \
 
-NAME	=		push_swap
+OBJECTS = $(SOURCES:.c=.o)
 
-all: 			${NAME}
+$(NAME): $(OBJECTS)
+		make -C ft_printf
+		$(CC) $(FLAGS) $(SOURCES) -Iheaders -o $(NAME) -lftprintf
 
-# server: 		server.o
-# 				$(CC) -Lft_printf -lftprintf -o $@ $^
-
-# client:			client.o
-# 				$(CC) -Lft_printf -lftprintf -o $@ $^ 
-
-# %.o: 			%.c
-# 				$(CC) $? -c $(CFLAGS)
-
-# ${NAME}:		ft_printf/libftprintf.a server client 
-
-ft_printf/libftprintf.a:
-				@make -C ft_printf
+all: $(NAME)
 
 clean:
-				rm -f $(OBJS)
-				@make -C ft_printf clean
- 
-fclean:			clean
-					${RM} ${NAME}
-					@make -C ft_printf fclean
+		@rm -rf $(OBJECTS)
 
-re: 			fclean all
+fclean: clean
+		@rm -rf $(NAME)
 
-.PHONY:			all  clean fclean re
+re: fclean all
