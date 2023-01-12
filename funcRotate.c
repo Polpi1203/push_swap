@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   funcRotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 16:23:50 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/08 16:45:38 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/12 15:11:20 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ int *func_ra(int array_a[], int size)
 
 	stock = array_a[0];
 	i = -1;
-	while (++i < size)
+	while (++i < size - 1)
 		array_a[i] = array_a[i+1];
 	array_a[i] = stock;
+	ft_printf("ra\n");
 	return (array_a);
 }
 
@@ -34,7 +35,7 @@ int *func_rb(int array_b[], int size)
 
 	stock = array_b[0];
 	i = -1;
-	while (++i < size)
+	while (++i < size - 1)
 		array_b[i] = array_b[i+1];
 	array_b[i] = stock;
 	return (array_b);

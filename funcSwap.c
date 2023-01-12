@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   funcSwap.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 15:43:54 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/08 16:42:22 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/12 14:57:01 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int *func_sa(int array_a[])
     a = array_a[0];
     array_a[0] = array_a[1];
     array_a[1] = a;
+    ft_printf("sa\n");
     return(array_a);
 }
 

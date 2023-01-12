@@ -25,23 +25,25 @@ int main(int ac, char **av)
         while (result[++index] != 0)
             a[index] = ft_atoi(result[index]);
     }
-    printf("%d", forget_min(a));
     // start algo
-    int i = 0;
     int size = count_space(av[1]);
-    int min = forget_min(a);
-    int max = forget_max(a);
-    while (a[0] != min && a[size + 1] != max)
+    int min = forget_min(a, size + 1);
+    int max = forget_max(a, size + 1);
+
+    printf("size : %d\n",size);
+    printf("a[size] : %d\n",a[size]);
+    printf("max : %d\nmin : %d\n", max, min);
+    while (a[0] != min || a[size] != max)
     {
-        if (a[i] > a[i+1] && a[i] != max)
+        if (a[0] > a[1] && a[0] != max)
            a = func_sa(a);
-        a = func_ra(a, size);
-        i++;
+        a = func_ra(a, size + 1);
+        index = -1;
     }
-    // test ( print array a)
-    index = -1;
     while (++index < count_space(av[1]) + 1)
-        printf("%d\n", a[index]);
+        printf("%d,", a[index]);
+    printf("\n");
+    // test ( print array a)
 
     if (ac > 2)
     {
