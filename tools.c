@@ -6,13 +6,13 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:52:35 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/12 14:53:19 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/14 10:40:21 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int count_space(char *str)
+int size_str(char *str)
 {
 	int	i;
 	int	count;
@@ -27,7 +27,7 @@ int count_space(char *str)
 	return (count);
 }
 
-int	forget_max(int a[], int size)
+int	nb_max(int a[], int size)
 {
 	int	i;
 	int	max;
@@ -43,7 +43,7 @@ int	forget_max(int a[], int size)
 	return (max);
 }
 
-int	forget_min(int a[], int size)
+int	nb_min(int a[], int size)
 {
 	int	i;
 	int	min;
@@ -59,6 +59,14 @@ int	forget_min(int a[], int size)
 	return (min);
 }
 
+void	print_array(int array[], int size)
+{
+	int	i;
+
+	i = -1;
+	while (++i < size + 1)
+		ft_printf("%d", array[i]);
+}
 /*
 int main(void)
 {

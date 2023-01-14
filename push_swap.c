@@ -6,47 +6,29 @@ int main(int ac, char **av)
 	int *a;
 	int *b;
 	int index;
+	int size;
 
 	a = NULL;
 	b = NULL;
 	index = -1;
+	size = size_str(av[1]);
 	if (ac == 2)
 	{
-		//char	**ft_split(char const *s, char c)
 		char    **result;
 
-		result = malloc(sizeof(char *) * count_space(av[1] + 1));
-		if (result == NULL)
-			return (0);
-		a = malloc(sizeof(int) * (count_space(av[1]) + 1));
-		if (a == NULL)
-			return (0);
-		b = malloc(sizeof(int) * (count_space(av[1]) + 1));
-		if (b == NULL)
+		result = malloc(sizeof(char *) * size_str(av[1] + 1));
+		a = malloc(sizeof(int) * (size_str(av[1]) + 1));
+		b = malloc(sizeof(int) * (size_str(av[1]) + 1));
+		if (a == NULL && b == NULL && result == NULL)
 			return (0);
 		result = ft_split(av[1], 32); // Give the string and separator
 		while (result[++index] != 0)
 			a[index] = ft_atoi(result[index]);
+		ft_printf("size = %d\n", size);
+		if (size == 2)
+			a = func_3(a, size);
+		print_array(a, size);
 	}
-	// start algo
-	int size = count_space(av[1]);
-	int min = forget_min(a, size + 1);
-	int max = forget_max(a, size + 1);
-
-	printf("size : %d\n",size);
-	printf("a[size] : %d\n",a[size]);
-	printf("max : %d\nmin : %d\n", max, min);
-	while (a[0] != min || a[size] != max)
-	{
-		if (a[0] > a[1] && a[0] != max)
-		   a = func_sa(a);
-		a = func_ra(a, size + 1);
-		index = -1;
-	}
-	while (++index < count_space(av[1]) + 1)
-		printf("%d,", a[index]);
-	printf("\n");
-	// test ( print array a)
 
 	if (ac > 2)
 	{

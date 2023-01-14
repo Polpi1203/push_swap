@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 15:43:54 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/12 14:57:01 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/14 11:07:21 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int *func_sb(int array_b[])
     a = array_b[0];
     array_b[0] = array_b[1];
     array_b[1] = a;
+    ft_printf("sb\n");
     return(array_b);
 }
 
@@ -39,6 +40,7 @@ void func_ss(int array_b[], int array_a[])
 {
     func_sa(array_a);
     func_sb(array_b);
+    ft_printf("ss\n");
 }
 /*
 int main(void)

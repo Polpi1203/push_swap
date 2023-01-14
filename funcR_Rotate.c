@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:43:04 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/14 10:16:13 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/14 11:07:03 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int *func_rra(int a[], int size)
 		a[i] = a[i-1];
 		a[i-1] = inter;
 	}
+	ft_printf("rra\n");
 	return (a);
 }
 
@@ -47,14 +48,17 @@ int *func_rrb(int b[], int size)
 		b[i] = b[i-1];
 		b[i-1] = inter;
 	}
+	ft_printf("rrb\n");
 	return (b);
 }
 
-void	func_rrr(int a[], int b, int size)
-[
+void	func_rrr(int a[], int b[], int size)
+{
 	func_rra(a, size);
 	func_rrb(b, size);
-]
+	ft_printf("rrr\n");
+}
+
 /*
 int main(void)
 {
@@ -68,4 +72,4 @@ int main(void)
 		printf("%d-", test[i]);
 	}
 }
-*\
+*/

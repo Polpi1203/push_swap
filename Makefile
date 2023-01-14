@@ -8,6 +8,8 @@ SOURCES = push_swap.c \
 			funcRotate.c \
 			funcSwap.c \
 			tools.c \
+			funcR_Rotate.c \
+			func3.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 
