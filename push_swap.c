@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
+/*   Updated: 2023/01/14 14:46:12 by afaucher         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -27,7 +38,7 @@ int main(int ac, char **av)
 		ft_printf("size = %d\n", size);
 		if (size == 2)
 			a = func_3(a, size);
-		print_array(a, size);
+		print_array(a, size);// Just for test
 	}
 
 	if (ac > 2)
