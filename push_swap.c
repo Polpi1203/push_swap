@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/14 14:46:12 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/18 14:12:19 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,43 @@
 
 int main(int ac, char **av)
 {
-	int *a;
-	int *b;
+	t_stack stack;
 	int index;
-	int size;
 
-	a = NULL;
-	b = NULL;
 	index = -1;
-	size = size_str(av[1]);
+	stack.size_a = size_str(av[1]);
+	stack.min = nb_min(stack);
+	stack.max = nb_max(stack);
+	//stack.size_b = -1
+	write (1, "ok", 2);
 	if (ac == 2)
 	{
 		char    **result;
 
 		result = malloc(sizeof(char *) * size_str(av[1] + 1));
-		a = malloc(sizeof(int) * (size_str(av[1]) + 1));
-		b = malloc(sizeof(int) * (size_str(av[1]) + 1));
-		if (a == NULL && b == NULL && result == NULL)
+		stack.a = malloc(sizeof(int) * (size_str(av[1]) + 1));
+		stack.b = malloc(sizeof(int) * (size_str(av[1]) + 1));
+		if (stack.a == NULL && stack.b == NULL && result == NULL)
 			return (0);
 		result = ft_split(av[1], 32); // Give the string and separator
 		while (result[++index] != 0)
-			a[index] = ft_atoi(result[index]);
-		ft_printf("size = %d\n", size);
-		if (size == 2)
-			a = func_3(a, size);
-		print_array(a, size);// Just for test
+			stack.a[index] = ft_atoi(result[index]);
+		ft_printf("size = %d\n", stack.size_a);
+		if (stack.size_a == 2)
+			func_3(&stack);
+		if (stack.size_a == 4)
+			func_5(&stack);
+		//print_array(stack.a, stack.size_a);// testing
 	}
 
-	if (ac > 2)
-	{
-		a = malloc(sizeof(int) * (ac - 1));
-		if (a == NULL)
-			return (0);
-		while (++index < (ac - 1))
-			a[index] = ft_atoi(av[index + 1]);
-	}
+	// if (ac > 2)
+	// {
+	// 	a = malloc(sizeof(int) * (ac - 1));
+	// 	if (a == NULL)
+	// 		return (0);
+	// 	while (++index < (ac - 1))
+	// 		a[index] = ft_atoi(av[index + 1]);
+	// }
 }
 
 /*

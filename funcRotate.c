@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 16:23:50 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/14 11:18:05 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/18 13:55:04 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,38 +14,36 @@
 
 // Manque les cas d'erreurs
 
-int *func_ra(int array_a[], int size)
+void	func_ra(t_stack *stack)
 {
 	int stock;
 	int i;
 
-	stock = array_a[0];
+	stock = stack->a[0];
 	i = -1;
-	while (++i < size)
-		array_a[i] = array_a[i+1];
-	array_a[i] = stock;
+	while (++i < stack->size_a)
+		stack->a[i] = stack->a[i+1];
+	stack->a[i] = stock;
 	ft_printf("ra\n");
-	return (array_a);
 }
 
-int *func_rb(int array_b[], int size)
+void	func_rb(t_stack *stack)
 {
 	int stock;
 	int i;
 
-	stock = array_b[0];
+	stock = stack->b[0];
 	i = -1;
-	while (++i < size - 1)
-		array_b[i] = array_b[i+1];
-	array_b[i] = stock;
+	while (++i < stack->size_b - 1)
+		stack->b[i] = stack->b[i+1];
+	stack->b[i] = stock;
 	ft_printf("rb\n");
-	return (array_b);
 }
 
-void    func_rr(int array_a[], int array_b[], int size)
+void    func_rr(t_stack *stack)
 {
-	func_ra(array_a, size);
-	func_rb(array_b, size);
+	func_ra(stack);
+	func_rb(stack);
 	ft_printf("rr\n");
 }
 

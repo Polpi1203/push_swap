@@ -7,9 +7,11 @@ FLAGS = -Wall -Wextra -Werror -Lft_printf
 SOURCES = push_swap.c \
 			funcRotate.c \
 			funcSwap.c \
+			funcPush.c \
 			tools.c \
 			funcR_Rotate.c \
 			func3.c \
+			func5.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 

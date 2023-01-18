@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:52:35 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/14 10:40:21 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/18 11:36:05 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,33 +27,33 @@ int size_str(char *str)
 	return (count);
 }
 
-int	nb_max(int a[], int size)
+int	nb_max(t_stack stack)
 {
 	int	i;
 	int	max;
 
 	i = 0;
-	max = a[0];
-	while (i != size)
+	max = stack.a[0];
+	while (i != stack.size_a)
 	{
-		if (a[i] > max)
-			max = a[i];
+		if (stack.a[i] > max)
+			max = stack.a[i];
 		i++;
 	}
 	return (max);
 }
 
-int	nb_min(int a[], int size)
+int	nb_min(t_stack stack)
 {
 	int	i;
 	int	min;
 
 	i = 0;
-	min = a[0];
-	while (i != size)
+	min = stack.a[0];
+	while (i != stack.size_a)
 	{
-		if (min > a[i])
-			min = a[i];
+		if (min > stack.a[i])
+			min = stack.a[i];
 		i++;
 	}
 	return (min);
@@ -66,6 +66,7 @@ void	print_array(int array[], int size)
 	i = -1;
 	while (++i < size + 1)
 		ft_printf("%d", array[i]);
+	write (1, "\n", 1);
 }
 /*
 int main(void)

@@ -6,13 +6,15 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:55 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/14 12:47:37 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/18 14:07:47 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int *func_5(int a[], int b[] , int size)
+void	func_5(t_stack *stack)
 {
-    
+	func_pb(stack);
+	func_pb(stack);
+	// func_3
 }

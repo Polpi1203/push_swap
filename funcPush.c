@@ -6,51 +6,70 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:25:04 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/13 13:36:56 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/18 14:02:07 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-// int	*ft_strjoin(int a[], int b[])
-// {
-// 	char	*result;
-// 	int		i;
-// 	int		j;
-// 	int		len_real;
-
-// 	i = 0;
-// 	j = 0;
-// 	len_real = (ft_strlen(s1) + ft_strlen(s2));
-// 	result = (char *)malloc(sizeof (char) * (len_real + 1));
-// 	if (result == NULL)
-// 		return (NULL);
-// 	while (s1[i] != '\0')
-// 	{
-// 		result[i] = s1[i];
-// 		i++;
-// 	}
-// 	while (s2[j] != '\0')
-// 	{
-// 		result[i] = s2[j];
-// 		i++;
-// 		j++;
-// 	}
-// 	result[i] = '\0';
-// 	return (result);
-// }
-
-// pa (push a) : Prend le premier élément au sommet de b et le met sur a. Ne fait rien si b est vide. 
-
-void    func_pa(int a[], int b[])
+void	func_pb(t_stack *stack)
 {
-    int i;
+	int	inter;
+	int	i;
 
-    i = -1;
-    while (++i < size - 1)
-    {
-        a[i] = b[i + 1];
-    }
-    b[0] = a[0];
+	i = -1;
+	inter = stack->a[0];
+
+	stack->size_a--;
+	stack->size_b++;
+
+	while (++i <= stack->size_a)
+		stack->a[i] = stack->a[i+1];
+	i = stack->size_b - 1;
+	while (i > 0)
+	{
+		stack->b[i] = stack->b[i-1];
+		i--;
+	}
+	stack->b[0] = inter;
+
+	stack->a[stack->size_a] = stack->a[stack->size_a + 1];
+	ft_printf("pb\n");
+	// printf("size de B = %d\n", stack->size_b);
+	// print_array(stack->a, stack->size_a);
+	// print_array(stack->b, stack->size_b);
+	
+}
+
+void	func_pa(t_stack *stack)
+{
+	int	inter;
+	int	i;
+
+	i = 0;
+	inter = stack->b[0];
+
+	// printf("STACK->B[0] = %d\n", stack->b[0]);
+	// printf("STACK->B[1] = %d\n", stack->b[1]);
+
+	stack->size_b--;
+	stack->size_a++;
+
+	while (i <= stack->size_b)
+	{
+		stack->b[i] = stack->b[i+1];
+		i++;
+	}
+	i = stack->size_a;
+	while (i > 0)
+	{
+		stack->a[i] = stack->a[i-1];
+		i--;
+	}
+	stack->a[0] = inter;
+	ft_printf("pa\n");
+	// printf("size de A = %d\n", stack->size_a);
+	// print_array(stack->b, stack->size_b);
+	// print_array(stack->a, stack->size_a);
+	
 }

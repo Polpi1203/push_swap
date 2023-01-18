@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 15:43:54 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/14 11:07:21 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/18 13:55:09 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,30 @@
 
 // Manque les cas d'erreurs
 
-int *func_sa(int array_a[])
+void    func_sa(t_stack *stack)
 {
     int a;
 
-    a = array_a[0];
-    array_a[0] = array_a[1];
-    array_a[1] = a;
+    a = stack->a[0];
+    stack->a[0] = stack->a[1];
+    stack->a[1] = a;
     ft_printf("sa\n");
-    return(array_a);
 }
 
-int *func_sb(int array_b[])
+void    func_sb(t_stack *stack)
 {
     int a;
 
-    a = array_b[0];
-    array_b[0] = array_b[1];
-    array_b[1] = a;
+    a = stack->b[0];
+    stack->b[0] = stack->b[1];
+    stack->b[1] = a;
     ft_printf("sb\n");
-    return(array_b);
 }
 
-void func_ss(int array_b[], int array_a[])
+void func_ss(t_stack *stack)
 {
-    func_sa(array_a);
-    func_sb(array_b);
+    func_sa(stack);
+    func_sb(stack);
     ft_printf("ss\n");
 }
 /*
