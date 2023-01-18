@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:52:35 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/18 11:36:05 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/18 14:47:43 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	nb_max(t_stack stack)
 
 	i = 0;
 	max = stack.a[0];
-	while (i != stack.size_a)
+	while (i <= stack.size_a)
 	{
 		if (stack.a[i] > max)
 			max = stack.a[i];
@@ -50,7 +50,7 @@ int	nb_min(t_stack stack)
 
 	i = 0;
 	min = stack.a[0];
-	while (i != stack.size_a)
+	while (i <= stack.size_a)
 	{
 		if (min > stack.a[i])
 			min = stack.a[i];
@@ -59,13 +59,13 @@ int	nb_min(t_stack stack)
 	return (min);
 }
 
-void	print_array(int array[], int size)
+void	print_array(t_stack *stack)
 {
 	int	i;
 
 	i = -1;
-	while (++i < size + 1)
-		ft_printf("%d", array[i]);
+	while (++i < stack->size_a + 1)
+		ft_printf("%d", stack->a[i]);
 	write (1, "\n", 1);
 }
 /*

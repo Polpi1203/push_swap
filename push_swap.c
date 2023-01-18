@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/18 14:12:19 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/18 14:35:30 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,7 @@ int main(int ac, char **av)
 
 	index = -1;
 	stack.size_a = size_str(av[1]);
-	stack.min = nb_min(stack);
-	stack.max = nb_max(stack);
-	//stack.size_b = -1
-	write (1, "ok", 2);
+	stack.b = NULL;
 	if (ac == 2)
 	{
 		char    **result;
@@ -35,14 +32,15 @@ int main(int ac, char **av)
 		result = ft_split(av[1], 32); // Give the string and separator
 		while (result[++index] != 0)
 			stack.a[index] = ft_atoi(result[index]);
-		ft_printf("size = %d\n", stack.size_a);
+		stack.min = nb_min(stack);
+		stack.max = nb_max(stack);
+		ft_printf("MIN = %d\nMAX = %d\n", stack.min, stack.max);
 		if (stack.size_a == 2)
 			func_3(&stack);
 		if (stack.size_a == 4)
 			func_5(&stack);
 		//print_array(stack.a, stack.size_a);// testing
 	}
-
 	// if (ac > 2)
 	// {
 	// 	a = malloc(sizeof(int) * (ac - 1));

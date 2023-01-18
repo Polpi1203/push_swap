@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:38:14 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/18 14:06:57 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/18 14:38:05 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void    func_3(t_stack *stack)
 {
+    stack->min = nb_min(*stack);
+	stack->max = nb_max(*stack);
+    write (1, "OK", 2);
     if(stack->a[stack->size_a] == stack->min && stack->a[1] == stack->max)
         func_rra(stack);
     else if (stack->a[stack->size_a] == stack->min && stack->a[0] == stack->max)

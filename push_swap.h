@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/18 14:07:09 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/18 14:47:59 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef struct s_stack
 int		size_str(char *str);
 int		nb_max(t_stack stack);
 int		nb_min(t_stack stack);	
-void	print_array(int array[], int size);
+void	print_array(t_stack *stack);
 
 void    func_sa(t_stack *stack);
 void    func_sb(t_stack *stack);
