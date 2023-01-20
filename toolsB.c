@@ -6,13 +6,13 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:07:45 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/20 14:15:36 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/20 14:37:58 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	nb_maxB(t_stack *stack)
+int	nb_maxb(t_stack *stack)
 {
 	int	i;
 	int	max;
@@ -28,7 +28,7 @@ int	nb_maxB(t_stack *stack)
 	return (max);
 }
 
-int	nb_minB(t_stack *stack)
+int	nb_minb(t_stack *stack)
 {
 	int	i;
 	int	min;

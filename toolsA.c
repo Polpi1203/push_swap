@@ -6,13 +6,13 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:52:35 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/20 14:15:41 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/20 14:37:16 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int size_str(char *str)
+int	size_str(char *str)
 {
 	int	i;
 	int	count;
@@ -75,16 +75,15 @@ void	little_3_nb(t_stack *stack)
 		i = -1;
 		while (++i < 4)
 		{
-			if (stack->k[i] > stack->k[i+1])
+			if (stack->k[i] > stack->k[i + 1])
 			{
 				a = stack->k[i];
-				stack->k[i] = stack->k[i+1];
-				stack->k[i+1] = a;
+				stack->k[i] = stack->k[i + 1];
+				stack->k[i + 1] = a;
 			}
 		}
 	}	
 }
-
 
 /*
 int main(void)

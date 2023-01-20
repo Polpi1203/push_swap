@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/20 14:01:16 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/20 14:38:16 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,11 @@ int main(int ac, char **av)
 			stack.a[index] = ft_atoi(result[index]);
 		stack.min = nb_min(stack);
 		stack.max = nb_max(stack);
-		printf("MIN = %d\nMAX = %d\n", stack.min, stack.max);
+		printf("MIN = %d\nMAX = %d\n", stack.min, stack.max);// A DELETE
 		if (stack.size_a == 2)
 			func_3(&stack);
 		if (stack.size_a == 4)
 			func_5(&stack);
-		//print_array(stack.a, stack.size_a);// testing
 	}
 	// if (ac > 2)
 	// {

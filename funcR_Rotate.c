@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   funcR_Rotate.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:43:04 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/18 11:36:26 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/20 14:31:21 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	func_rra(t_stack *stack)
 	while (--i != 1)
 	{
 		inter = stack->a[i];
-		stack->a[i] = stack->a[i-1];
-		stack->a[i-1] = inter;
+		stack->a[i] = stack->a[i - 1];
+		stack->a[i - 1] = inter;
 	}
 	ft_printf("rra\n");
 }
@@ -44,8 +44,8 @@ void	func_rrb(t_stack *stack)
 	while (--i != 1)
 	{
 		inter = stack->b[i];
-		stack->b[i] = stack->b[i-1];
-		stack->b[i-1] = inter;
+		stack->b[i] = stack->b[i - 1];
+		stack->b[i - 1] = inter;
 	}
 	ft_printf("rrb\n");
 }

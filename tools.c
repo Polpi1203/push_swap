@@ -6,13 +6,13 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/20 11:32:08 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/20 14:38:15 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_arrayA(t_stack *stack)
+void	print_arraya(t_stack *stack)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ void	print_arrayA(t_stack *stack)
 	write (1, "\n", 1);
 }
 
-void	print_arrayB(t_stack *stack)
+void	print_arrayb(t_stack *stack)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ void	print_arrayB(t_stack *stack)
 	write (1, "\n", 1);
 }
 
-void	print_arrayK(t_stack *stack)
+void	print_arrayk(t_stack *stack)
 {
 	int	i;
 

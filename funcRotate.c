@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 16:23:50 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/20 13:52:00 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/20 14:32:30 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,33 +16,33 @@
 
 void	func_ra(t_stack *stack)
 {
-	int stock;
-	int i;
+	int	stock;
+	int	i;
 
 	stock = stack->a[0];
 	i = -1;
 	while (++i < stack->size_a)
-		stack->a[i] = stack->a[i+1];
+		stack->a[i] = stack->a[i + 1];
 	stack->a[i] = stock;
 	ft_printf("ra\n");
 }
 
 void	func_rb(t_stack *stack)
 {
-	int stock;
-	int i;
+	int	stock;
+	int	i;
 
 	stock = stack->b[0];
 	i = -1;
 	while (++i <= stack->size_b - 1)
 	{
-		stack->b[i] = stack->b[i+1];
+		stack->b[i] = stack->b[i + 1];
 	}
 	stack->b[i] = stock;
 	ft_printf("rb\n");
 }
 
-void    func_rr(t_stack *stack)
+void	func_rr(t_stack *stack)
 {
 	func_ra(stack);
 	func_rb(stack);
