@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/18 14:35:30 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/20 14:01:16 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int main(int ac, char **av)
 		char    **result;
 
 		result = malloc(sizeof(char *) * size_str(av[1] + 1));
-		stack.a = malloc(sizeof(int) * (size_str(av[1]) + 1));
-		stack.b = malloc(sizeof(int) * (size_str(av[1]) + 1));
+		stack.a = malloc(sizeof(int) * (size_str(av[1])));
+		stack.b = malloc(sizeof(int) * (size_str(av[1])));
 		if (stack.a == NULL && stack.b == NULL && result == NULL)
 			return (0);
 		result = ft_split(av[1], 32); // Give the string and separator
@@ -34,7 +34,7 @@ int main(int ac, char **av)
 			stack.a[index] = ft_atoi(result[index]);
 		stack.min = nb_min(stack);
 		stack.max = nb_max(stack);
-		ft_printf("MIN = %d\nMAX = %d\n", stack.min, stack.max);
+		printf("MIN = %d\nMAX = %d\n", stack.min, stack.max);
 		if (stack.size_a == 2)
 			func_3(&stack);
 		if (stack.size_a == 4)

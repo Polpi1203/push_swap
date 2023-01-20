@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/18 14:47:59 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/20 11:32:28 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_stack
 {
 	int *a;
 	int *b;
+	int	*k;
 	int size_a;
 	int size_b;
 	int	min;
@@ -35,7 +36,13 @@ typedef struct s_stack
 int		size_str(char *str);
 int		nb_max(t_stack stack);
 int		nb_min(t_stack stack);	
-void	print_array(t_stack *stack);
+void	little_3_nb(t_stack *stack);
+void	print_arrayA(t_stack *stack);
+void	print_arrayB(t_stack *stack);
+void	print_arrayK(t_stack *stack);
+
+int		nb_minB(t_stack *stack);
+int		nb_maxB(t_stack *stack);
 
 void    func_sa(t_stack *stack);
 void    func_sb(t_stack *stack);
@@ -54,6 +61,7 @@ void	func_pa(t_stack *stack);
 
 void    func_3(t_stack *stack);
 void	func_5(t_stack *stack);
+void	func_35(t_stack *stack);
 
 
 #endif
