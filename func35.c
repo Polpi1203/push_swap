@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:02:29 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/20 14:04:28 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/20 14:11:41 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	func_35(t_stack *stack)
 		func_sb(stack);
 		func_rrb(stack);
 	}
-	else if (stack->b[0] == stack->max && stack->b[1] == stack->max)
+	else if (stack->b[0] == stack->max && stack->b[1] == stack->min)
 	{
 		func_sb(stack);
 		func_rb(stack);

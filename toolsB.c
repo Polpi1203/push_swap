@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:07:45 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/20 14:05:21 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/20 14:15:36 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	nb_minB(t_stack *stack)
 
 	i = 0;
 	min = stack->b[0];
-	while (i <= stack->size_b - 1)
+	while (i <= stack->size_b)
 	{
 		if (min > stack->b[i])
 			min = stack->b[i];
