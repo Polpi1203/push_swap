@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:55 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/20 14:28:41 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/21 13:21:37 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	pushk_to_b(t_stack *stack)
 void	func_5(t_stack *stack)
 {
 	little_3_nb(stack);
-	pushK_to_b(stack);
+	pushk_to_b(stack);
 	stack->size_b--;
 	func_35(stack);
 	if (stack->a[0] > stack->a[1])
@@ -42,5 +42,5 @@ void	func_5(t_stack *stack)
 	func_pa(stack);
 	func_pa(stack);
 	free (stack->k);
-	print_arrayA(stack);
+	print_arraya(stack);
 }
