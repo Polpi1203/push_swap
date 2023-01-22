@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/20 14:37:51 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/22 12:31:48 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void	func_pa(t_stack *stack);
 void	func_3(t_stack *stack);
 void	func_5(t_stack *stack);
 void	func_35(t_stack *stack);
+void	func_100(t_stack *stack);
 
 
 #endif
