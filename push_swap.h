@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/22 12:31:48 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/22 15:59:48 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	print_arrayk(t_stack *stack);
 
 int		nb_minb(t_stack *stack);
 int		nb_maxb(t_stack *stack);
+void	pushk_to_b(t_stack *stack);
 
 void	func_sa(t_stack *stack);
 void	func_sb(t_stack *stack);

@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/20 14:38:15 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/22 17:07:20 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	print_arraya(t_stack *stack)
 
 	i = -1;
 	while (++i < stack->size_a + 1)
-		ft_printf("%d", stack->a[i]);
+		ft_printf("%d, ", stack->a[i]);
 	write (1, "\n", 1);
 }
 
@@ -28,7 +28,7 @@ void	print_arrayb(t_stack *stack)
 
 	i = -1;
 	while (++i < stack->size_b + 1)
-		ft_printf("%d", stack->b[i]);
+		ft_printf("%d, ", stack->b[i]);
 	write (1, "\n", 1);
 }
 

@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/22 13:03:21 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/22 16:59:32 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int main(int ac, char **av)
 
 	index = -1;
 	stack.size_a = size_str(av[1]);
-	stack.b = 0;
 	if (ac == 2)
 	{
 		char    **result;
@@ -40,7 +39,10 @@ int main(int ac, char **av)
 		else if (stack.size_a == 4)
 			func_5(&stack);
 		else if (stack.size_a <= 100)
+		{
 			func_100(&stack); 
+			//print_arraya(&stack);
+		}
 	}
 	// if (ac > 2)
 	// {

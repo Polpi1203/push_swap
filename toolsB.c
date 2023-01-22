@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:07:45 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/20 14:37:58 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/22 15:59:49 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,22 @@ int	nb_minb(t_stack *stack)
 		i++;
 	}
 	return (min);
+}
+
+void	pushk_to_b(t_stack *stack)
+{
+	int	i;
+
+	i = 0;
+	while (i != 3)
+	{
+		if (stack->a[0] == stack->k[0] || stack->a[0] == stack->k[1]
+			|| stack->a[0] == stack->k[2])
+		{
+			func_pb(stack);
+			i++;
+		}
+		else
+			func_ra(stack);
+	}
 }
