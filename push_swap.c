@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/22 16:59:32 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/23 20:01:23 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,17 @@ int main(int ac, char **av)
 		stack.min = nb_min(stack);
 		stack.max = nb_max(stack);
 		printf("MIN = %d\nMAX = %d\n", stack.min, stack.max);// A DELETE
+		printf("SIZE A = %d\n", stack.size_a);
 		if (stack.size_a == 2)
 			func_3(&stack);
 		else if (stack.size_a == 4)
 			func_5(&stack);
 		else if (stack.size_a <= 100)
 		{
+			write (1, "OK", 2);
 			func_100(&stack); 
-			//print_arraya(&stack);
 		}
+		printf("Count = %d\n", stack.count);
 	}
 	// if (ac > 2)
 	// {

@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/22 15:59:48 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/23 19:33:20 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct s_stack
 	int	size_b;
 	int	min;
 	int	max;
+	int count;
 }	t_stack;
 
 int		size_str(char *str);

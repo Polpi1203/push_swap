@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:25:04 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/22 12:56:53 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/23 19:48:33 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	func_pb(t_stack *stack)
 		i--;
 	}
 	stack->b[0] = inter;
+	stack->count++;
 	ft_printf("pb\n");
 }
 

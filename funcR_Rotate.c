@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:43:04 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/22 12:59:51 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/23 19:48:13 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	func_rra(t_stack *stack)
 		stack->a[i] = stack->a[i - 1];
 		stack->a[i - 1] = inter;
 	}
+	stack->count++;
 	ft_printf("rra\n");
 }
 

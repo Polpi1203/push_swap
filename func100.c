@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 12:03:51 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/22 17:23:34 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/23 19:41:33 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	func_100(t_stack *stack)
 {
 	int	i;
 	int	j;
-	int	inter_size_a;
+	int	inter_size;
 
 	i = -1;
-	inter_size_a = stack->size_a;
-	while (++i <= inter_size_a)
+	inter_size = stack->size_a;
+	while (++i <= inter_size)
 	{
 		printf("SizeofA = %d\n", stack->size_a);
 		stack->min = nb_min(*stack);
@@ -41,7 +41,7 @@ void	func_100(t_stack *stack)
 		}
 		else if(j > stack->size_a / 2)
 		{
-			while (j <= stack->size_a + 1)
+			while (j <= stack->size_a)
 			{
 				func_rra(stack);
 				j++;
@@ -50,7 +50,12 @@ void	func_100(t_stack *stack)
 		func_pb(stack);
 	}
 	stack->size_b--;
-	print_arrayb(stack);
+	inter_size = stack->size_b;
+	printf("size of B = %d\n", stack->size_b);
+	i = -1;
+	while (++i < inter_size)
+		func_pa(stack);
+	print_arraya(stack);
 }
 /*func_pa(stack);
 	func_pa(stack);
