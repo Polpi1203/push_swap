@@ -3,17 +3,65 @@
 /*                                                        :::      ::::::::   */
 /*   func100.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 12:03:51 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/23 19:41:33 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/25 11:16:02 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "push_swap.h"
 
-void	func_100(t_stack *stack)
+int	sorted_list(t_stack *stack)
+{
+	int	i;
+
+	i = 0;
+	if (stack->size_a > 1)
+	{
+		while (i < stack->size_a - 1)
+		{
+			if (stack->a[i] > stack->a[i + 1])
+				return (0);
+			i++;
+		}
+	}
+	return (1);
+}
+
+void	big_func(t_stack *stack)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	printf("RESULT SORTED LIST = %d\n", sorted_list(stack));
+	while (sorted_list(stack) == 0)
+	{
+		j = 0;
+		while (j < stack->size_a && sorted_list(stack) == 0)
+		{
+			j++;
+			if (((stack->a[0] >> i) & 1) == 0)
+				func_pb(stack);
+			else
+				func_ra(stack);
+			sleep(1);
+			printf("SIZE OF J = %d\n", j);
+			printf("SIZE OF A = %d\n", stack->size_a);
+			print_arrayb(stack);
+		}
+		while (stack->size_b > 0)
+		{
+			func_pa(stack);
+			printf("SIZE B = %d\n", stack->size_b);
+			sleep(1); 
+		}
+		i++;
+	}
+}
+/*void	func_100(t_stack *stack)
 {
 	int	i;
 	int	j;
@@ -57,6 +105,8 @@ void	func_100(t_stack *stack)
 		func_pa(stack);
 	print_arraya(stack);
 }
+*/
+
 /*func_pa(stack);
 	func_pa(stack);
 	func_pa(stack);

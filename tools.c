@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/22 17:07:20 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/25 10:58:18 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	print_arrayb(t_stack *stack)
 	int	i;
 
 	i = -1;
-	while (++i < stack->size_b + 1)
+	while (++i < stack->size_b)
 		ft_printf("%d, ", stack->b[i]);
 	write (1, "\n", 1);
 }

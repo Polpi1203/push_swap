@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/23 20:01:23 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/25 10:20:17 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main(int ac, char **av)
 		else if (stack.size_a <= 100)
 		{
 			write (1, "OK", 2);
-			func_100(&stack); 
+			big_func(&stack); 
 		}
 		printf("Count = %d\n", stack.count);
 	}
