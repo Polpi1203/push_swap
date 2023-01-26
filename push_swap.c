@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/25 10:20:17 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/26 13:56:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,37 +15,34 @@
 int main(int ac, char **av)
 {
 	t_stack stack;
-	int index;
-
-	index = -1;
-	stack.size_a = size_str(av[1]);
+	
+	printf("VALUE AC = %d\n", ac);
 	if (ac == 2)
 	{
-		char    **result;
-
-		result = malloc(sizeof(char *) * size_str(av[1] + 1));
-		stack.a = malloc(sizeof(int) * (size_str(av[1])));
-		stack.b = malloc(sizeof(int) * (size_str(av[1])));
-		if (stack.a == NULL && stack.b == NULL && result == NULL)
-			return (0);
-		result = ft_split(av[1], 32); // Give the string and separator
-		while (result[++index] != 0)
-			stack.a[index] = ft_atoi(result[index]);
-		stack.min = nb_min(stack);
-		stack.max = nb_max(stack);
-		printf("MIN = %d\nMAX = %d\n", stack.min, stack.max);// A DELETE
-		printf("SIZE A = %d\n", stack.size_a);
-		if (stack.size_a == 2)
-			func_3(&stack);
-		else if (stack.size_a == 4)
-			func_5(&stack);
-		else if (stack.size_a <= 100)
-		{
-			write (1, "OK", 2);
-			big_func(&stack); 
-		}
-		printf("Count = %d\n", stack.count);
+		stack.size_a = size_str(av[1]);
+		def_value(&stack);
+		create_stack_str(&stack, av[1]);
 	}
+	else if (ac > 2)
+	{
+		stack.size_a = ac - 2;
+		def_value(&stack);
+		create_stack_arg(&stack, av);
+	}
+	stack.min = nb_min(stack);
+	stack.max = nb_max(stack);
+	printf("MIN = %d\nMAX = %d\n", stack.min, stack.max);// A DELETE
+	printf("SIZE A = %d\n", stack.size_a);
+	if (stack.size_a == 2)
+		func_3(&stack);
+	else if (stack.size_a == 4)
+		func_5(&stack);
+	else if (stack.size_a > 4)
+	{
+		write (1, "OK", 2);
+		big_func(&stack); 
+	}
+	printf("Count = %d\n", stack.count);
 	// if (ac > 2)
 	// {
 	// 	a = malloc(sizeof(int) * (ac - 1));

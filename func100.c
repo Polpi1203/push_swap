@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 12:03:51 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/25 11:16:02 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/26 09:56:25 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	big_func(t_stack *stack)
 	int	j;
 
 	i = 0;
-	printf("RESULT SORTED LIST = %d\n", sorted_list(stack));
+	//printf("RESULT SORTED LIST = %d\n", sorted_list(stack));
 	while (sorted_list(stack) == 0)
 	{
 		j = 0;
@@ -47,16 +47,16 @@ void	big_func(t_stack *stack)
 				func_pb(stack);
 			else
 				func_ra(stack);
-			sleep(1);
-			printf("SIZE OF J = %d\n", j);
-			printf("SIZE OF A = %d\n", stack->size_a);
-			print_arrayb(stack);
+			// sleep(1);
+			// printf("SIZE OF J = %d\n", j);
+			// printf("SIZE OF A = %d\n", stack->size_a);
+			// print_arrayb(stack);
 		}
 		while (stack->size_b > 0)
 		{
 			func_pa(stack);
-			printf("SIZE B = %d\n", stack->size_b);
-			sleep(1); 
+			//printf("SIZE B = %d\n", stack->size_b);
+			//sleep(1); 
 		}
 		i++;
 	}

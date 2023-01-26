@@ -6,11 +6,40 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/25 10:58:18 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/26 13:52:29 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int def_value(t_stack *stack)
+{
+	stack->result = malloc(sizeof(char *) * (stack->size_a + 1));
+	stack->a = malloc(sizeof(int) * (stack->size_a));
+	stack->b = malloc(sizeof(int) * (stack->size_a));
+	if (stack->a == NULL && stack->b == NULL && stack->result == NULL)
+		return (0);
+	return (0);
+}
+
+void	create_stack_str(t_stack *stack, char *str)
+{
+	int		index;
+
+	index = -1;
+	stack->result = ft_split(str, 32); // Give the string and separator
+	while (stack->result[++index] != 0)
+		stack->a[index] = ft_atoi(stack->result[index]);
+}
+
+void	create_stack_arg(t_stack *stack, char **arg)
+{
+	int i;
+
+	i = -1;
+	while (++i < stack->size_a)
+		stack->a[i] = ft_atoi(arg[i + 1]);	
+}
 
 void	print_arraya(t_stack *stack)
 {

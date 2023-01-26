@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   toolsA.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:52:35 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/20 14:37:16 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/26 13:56:14 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,33 +27,33 @@ int	size_str(char *str)
 	return (count);
 }
 
-int	nb_max(t_stack stack)
+int	nb_max(t_stack *stack)
 {
 	int	i;
 	int	max;
 
 	i = 0;
-	max = stack.a[0];
+	max = stack->a[0];
 	while (i <= stack.size_a)
 	{
-		if (stack.a[i] > max)
-			max = stack.a[i];
+		if (stack->a[i] > max)
+			max = stack->a[i];
 		i++;
 	}
 	return (max);
 }
 
-int	nb_min(t_stack stack)
+int	nb_min(t_stack *stack)
 {
 	int	i;
 	int	min;
 
 	i = 0;
-	min = stack.a[0];
-	while (i <= stack.size_a)
+	min = stack->a[0];
+	while (i <= stack->size_a)
 	{
-		if (min > stack.a[i])
-			min = stack.a[i];
+		if (min > stack->a[i])
+			min = stack->a[i];
 		i++;
 	}
 	return (min);
