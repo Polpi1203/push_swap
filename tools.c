@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/26 13:52:29 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/28 09:14:04 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	create_stack_arg(t_stack *stack, char **arg)
 	int i;
 
 	i = -1;
-	while (++i < stack->size_a)
+	while (++i <= stack->size_a)
 		stack->a[i] = ft_atoi(arg[i + 1]);	
 }
 

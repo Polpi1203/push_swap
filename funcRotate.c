@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 16:23:50 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/23 19:48:08 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/28 09:19:26 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	func_ra(t_stack *stack)
 
 	stock = stack->a[0];
 	i = -1;
-	while (++i < stack->size_a)
+	while (++i <= stack->size_a - 1)
 		stack->a[i] = stack->a[i + 1];
 	stack->a[i] = stock;
 	stack->count++;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/26 11:18:23 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/26 17:51:47 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ typedef struct s_stack
 }	t_stack;
 
 int		size_str(char *str);
-int		nb_max(t_stack stack);
-int		nb_min(t_stack stack);	
+int		nb_max(t_stack *stack);
+int		nb_min(t_stack *stack);	
 void	little_3_nb(t_stack *stack);
 int 	def_value(t_stack *stack);
 void	create_stack_str(t_stack *stack, char *str);

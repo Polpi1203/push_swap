@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   toolsA.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:52:35 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/26 13:56:14 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/26 17:52:09 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	nb_max(t_stack *stack)
 
 	i = 0;
 	max = stack->a[0];
-	while (i <= stack.size_a)
+	while (i <= stack->size_a)
 	{
 		if (stack->a[i] > max)
 			max = stack->a[i];

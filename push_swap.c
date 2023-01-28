@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/26 13:56:24 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/01/26 17:54:21 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int main(int ac, char **av)
 		def_value(&stack);
 		create_stack_arg(&stack, av);
 	}
-	stack.min = nb_min(stack);
-	stack.max = nb_max(stack);
+	stack.min = nb_min(&stack);
+	stack.max = nb_max(&stack);
 	printf("MIN = %d\nMAX = %d\n", stack.min, stack.max);// A DELETE
 	printf("SIZE A = %d\n", stack.size_a);
 	if (stack.size_a == 2)

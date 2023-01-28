@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:38:14 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/20 14:27:01 by polpi            ###   ########.fr       */
+/*   Updated: 2023/01/26 17:52:40 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	func_3(t_stack *stack)
 {
-	stack->min = nb_min(*stack);
-	stack->max = nb_max(*stack);
+	stack->min = nb_min(stack);
+	stack->max = nb_max(stack);
 	if (stack->a[stack->size_a] == stack->min && stack->a[1] == stack->max)
 		func_rra(stack);
 	else if (stack->a[stack->size_a] == stack->min && stack->a[0] == stack->max)
