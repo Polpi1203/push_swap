@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   func100.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 12:03:51 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/28 11:36:25 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/08 11:34:04 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	sorted_list(t_stack *stack)
 	i = 0;
 	if (stack->size_a > 1)
 	{
-		while (i < stack->size_a - 1)
+		while (i < stack->size_a)
 		{
 			if (stack->a[i] > stack->a[i + 1])
 				return (0);
@@ -30,35 +30,44 @@ int	sorted_list(t_stack *stack)
 	return (1);
 }
 
+int	topush(t_stack *stack, int i)
+{
+	printf("Value i : %d---- Stack->[0] : %d :topush : %d\n",i, stack->a[0], ((stack->a[0] >> i) & 1));
+	if ((stack->a[0] >> i) & 1)
+		return (0);
+	return (1);
+}
+
 void	big_func(t_stack *stack)
 {
 	int	i;
 	int	j;
+	int inter;
 
 	i = 0;
+	inter = stack->size_a;
 	//printf("RESULT SORTED LIST = %d\n", sorted_list(stack));
 	while (sorted_list(stack) == 0)
 	{
 		j = 0;
-		while (j < stack->size_a && sorted_list(stack) == 0)
+		while (j <= inter)
 		{
+			printf("SIZE A = %d\n", stack->size_a);
+			printf("SIZE J = %d\n", j);
+			printf("SIZE I = %d\n", i);
 			j++;
-			if (((stack->a[0] >> i) & 1) == 0)
+			if (topush(stack, i) == 1)
 				func_pb(stack);
 			else
 				func_ra(stack);
-			// sleep(1);
-			// printf("SIZE OF J = %d\n", j);
-			// printf("SIZE OF A = %d\n", stack->size_a);
-			// print_arrayb(stack);
 		}
 		while (stack->size_b > 0)
 		{
 			func_pa(stack);
-			//printf("SIZE B = %d\n", stack->size_b);
-			//sleep(1); 
 		}
 		i++;
+		printf("value i: %d\n", i);
+		print_arraya(stack);
 	}
 }
 /*void	func_100(t_stack *stack)
