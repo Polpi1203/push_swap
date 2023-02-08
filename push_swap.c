@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/08 09:47:18 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/08 21:05:59 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int main(int ac, char **av)
 	}
 	stack.min = nb_min(&stack);
 	stack.max = nb_max(&stack);
-	printf("MIN = %d\nMAX = %d\n", stack.min, stack.max);// A DELETE
 	if (stack.size_a == 2)
 		func_3(&stack);
 	else if (stack.size_a == 4)
@@ -39,22 +38,7 @@ int main(int ac, char **av)
 	{
 		big_func(&stack); 
 	}
-	printf("Count = %d\n", stack.count);
-	// if (ac > 2)
-	// {
-	// 	a = malloc(sizeof(int) * (ac - 1));
-	// 	if (a == NULL)
-	// 		return (0);
-	// 	while (++index < (ac - 1))
-	// 		a[index] = ft_atoi(av[index + 1]);
-	// }
 }
 
-/*
-while (nb[0] != min && nb[end] != max)
-	if (nb > nb+1 && nb != max)
-		swap
-	rotate
-*/
 
 
