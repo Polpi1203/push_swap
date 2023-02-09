@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/09 18:12:14 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/09 21:33:19 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_stack
 	char	**result;
 	int		*b;
 	int		*k;
+	int		*inter;
 	int		size_a;
 	int		size_b;
 	int		min;
@@ -40,6 +41,7 @@ void	little_3_nb(t_stack *stack);
 int 	def_value(t_stack *stack);
 void	create_stack_str(t_stack *stack, char *str);
 void	create_stack_arg(t_stack *stack, char **arg);
+void	ft_normalizes(t_stack *stack);
 void	print_arraya(t_stack *stack);
 void	print_arrayb(t_stack *stack);
 void	print_arrayk(t_stack *stack);

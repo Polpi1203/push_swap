@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/08 21:05:59 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/09 21:42:24 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,16 @@ int main(int ac, char **av)
 	stack.min = nb_min(&stack);
 	stack.max = nb_max(&stack);
 	if (stack.size_a == 2)
-		func_3(&stack);
+		sort_3_nbr(&stack);
 	else if (stack.size_a == 4)
-		func_5(&stack);
+		sort_5_nbr(&stack);
 	else if (stack.size_a > 4)
 	{
+		print_arraya(&stack);
 		big_func(&stack); 
-	}
+		print_arraya(&stack);
+	}	
+	
 }
 
 
