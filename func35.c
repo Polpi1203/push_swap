@@ -6,11 +6,13 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:02:29 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/21 13:22:12 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/09 18:12:13 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/*Sort B in descending order*/
 
 void	func_35(t_stack *stack)
 {

@@ -6,11 +6,13 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:25:04 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/23 19:48:33 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/09 18:16:34 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/*Push the first number from a to b*/
 
 void	func_pb(t_stack *stack)
 {
@@ -33,6 +35,8 @@ void	func_pb(t_stack *stack)
 	stack->count++;
 	ft_printf("pb\n");
 }
+
+/*push the first number from b to a*/
 
 void	func_pa(t_stack *stack)
 {

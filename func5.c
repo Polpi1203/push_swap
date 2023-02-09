@@ -6,13 +6,15 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:55 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/22 16:06:46 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/09 18:12:14 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	func_5(t_stack *stack)
+/*Sort list for 5 nbr*/
+
+void	sort_5_nbr(t_stack *stack)
 {
 	little_3_nb(stack);
 	pushk_to_b(stack);

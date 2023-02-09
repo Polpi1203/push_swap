@@ -6,11 +6,13 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:52:35 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/26 17:52:09 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/09 18:25:07 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/*forget the number of number for one argument*/
 
 int	size_str(char *str)
 {
@@ -26,6 +28,8 @@ int	size_str(char *str)
 	}
 	return (count);
 }
+
+/*Forget the max number*/
 
 int	nb_max(t_stack *stack)
 {
@@ -43,6 +47,8 @@ int	nb_max(t_stack *stack)
 	return (max);
 }
 
+/*Forget the min number*/
+
 int	nb_min(t_stack *stack)
 {
 	int	i;
@@ -58,6 +64,8 @@ int	nb_min(t_stack *stack)
 	}
 	return (min);
 }
+
+/*Put the 3 smallest number at the beginning to K*/
 
 void	little_3_nb(t_stack *stack)
 {	

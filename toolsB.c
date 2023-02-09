@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   toolsB.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:07:45 by polpi             #+#    #+#             */
-/*   Updated: 2023/01/26 13:56:14 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/09 18:25:55 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/*Forget the max number from B*/
 
 int	nb_maxb(t_stack *stack)
 {
@@ -28,6 +30,8 @@ int	nb_maxb(t_stack *stack)
 	return (max);
 }
 
+/*Forget the min number from B*/
+
 int	nb_minb(t_stack *stack)
 {
 	int	i;
@@ -43,6 +47,8 @@ int	nb_minb(t_stack *stack)
 	}
 	return (min);
 }
+
+/*Push the 3 smallest number to B*/
 
 void	pushk_to_b(t_stack *stack)
 {

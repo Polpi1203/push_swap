@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/26 17:51:47 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/09 18:12:14 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,8 @@ void	func_rrr(t_stack *stack);
 void	func_pb(t_stack *stack);
 void	func_pa(t_stack *stack);
 
-void	func_3(t_stack *stack);
-void	func_5(t_stack *stack);
+void	sort_3_nbr(t_stack *stack);
+void	sort_5_nbr(t_stack *stack);
 void	func_35(t_stack *stack);
 void	big_func(t_stack *stack);
 int		sorted_list(t_stack *stack);

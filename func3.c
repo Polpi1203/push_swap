@@ -6,13 +6,15 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:38:14 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/26 17:52:40 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/09 18:03:49 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	func_3(t_stack *stack)
+/*Sort list for 3 numbers*/
+
+void	sort_3_nbr(t_stack *stack)
 {
 	stack->min = nb_min(stack);
 	stack->max = nb_max(stack);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/08 10:04:06 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/09 18:23:51 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,19 @@ int def_value(t_stack *stack)
 	return (0);
 }
 
+/*Creat the stack if there is only one argument*/
+
 void	create_stack_str(t_stack *stack, char *str)
 {
 	int		index;
 
 	index = -1;
-	stack->result = ft_split(str, 32); // Give the string and separator
+	stack->result = ft_split(str, 32);
 	while (stack->result[++index] != 0)
 		stack->a[index] = ft_atoi(stack->result[index]);
 }
+
+/*Creat the stack if there is several arguments*/
 
 void	create_stack_arg(t_stack *stack, char **arg)
 {
@@ -41,6 +45,7 @@ void	create_stack_arg(t_stack *stack, char **arg)
 		stack->a[i] = ft_atoi(arg[i + 1]);	
 }
 
+/*
 void	print_arraya(t_stack *stack)
 {
 	int	i;
@@ -70,3 +75,4 @@ void	print_arrayk(t_stack *stack)
 		ft_printf("%d", stack->k[i]);
 	write (1, "\n", 1);
 }
+*/

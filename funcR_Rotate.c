@@ -6,11 +6,13 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:43:04 by afaucher          #+#    #+#             */
-/*   Updated: 2023/01/23 19:48:13 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/09 18:19:18 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/*Move the last number to the first position*/
 
 void	func_rra(t_stack *stack)
 {
@@ -32,6 +34,8 @@ void	func_rra(t_stack *stack)
 	ft_printf("rra\n");
 }
 
+/*Move the last number to the first position*/
+
 void	func_rrb(t_stack *stack)
 {
 	int	i;
@@ -52,24 +56,11 @@ void	func_rrb(t_stack *stack)
 	ft_printf("rrb\n");
 }
 
+/*Use rra and rrb in same time*/
+
 void	func_rrr(t_stack *stack)
 {
 	func_rra(stack);
 	func_rrb(stack);
 	ft_printf("rrr\n");
 }
-
-/*
-int main(void)
-{
-	int	test[] = {4,8,2};
-
-	func_rra(test, 2);
-
-	int i = -1;
-	while (++i < 3)
-	{
-		printf("%d-", test[i]);
-	}
-}
-*/
