@@ -3,14 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/09 21:42:47 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/10 09:49:54 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/*Check if there is a duplicate in stack A*/
+
+int	check_duplicate(t_stack *stack)
+{
+	int	i;
+	int	j;
+
+	i = -1;
+	while (++i <= stack->size_a)
+	{
+		j = i + 1;
+		while (j <= stack->size_a)
+		{	
+			if (stack->a[i] == stack->a[j])
+				return (1);
+			j++;
+		}	
+	}
+	return (0);
+}
 
 /* Normalizes the numbers before sort them*/
 
@@ -36,6 +57,7 @@ void	ft_normalizes(t_stack *stack)
 		stack->a[i] = (stack->size_a - count);
 		i++;
 	}
+	free (stack->inter);
 }
 
 /*Malloc all*/
