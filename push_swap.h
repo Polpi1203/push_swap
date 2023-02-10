@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/10 16:28:11 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/10 19:17:48 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void	func_pb(t_stack *stack);
 void	func_pa(t_stack *stack);
 
 void	sort_3_nbr(t_stack *stack);
+void    sort_4(t_stack *stack);
 void	sort_5_nbr(t_stack *stack);
 void	func_35(t_stack *stack);
 void	big_func(t_stack *stack);
