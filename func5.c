@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   func5.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:55 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/10 14:28:29 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/10 19:05:48 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ void	sort_5_nbr(t_stack *stack)
 	func_pa(stack);
 	func_pa(stack);
 	free (stack->k);
-	print_arraya(stack);
 }
