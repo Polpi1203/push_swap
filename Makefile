@@ -16,6 +16,7 @@ SOURCES = push_swap.c \
 			func5.c \
 			func35.c \
 			func100.c \
+			check_error.c\
 
 OBJECTS = $(SOURCES:.c=.o)
 

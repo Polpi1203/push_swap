@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/10 09:37:14 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/10 13:40:52 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,16 @@ void	little_3_nb(t_stack *stack);
 int 	def_value(t_stack *stack);
 void	create_stack_str(t_stack *stack, char *str);
 void	create_stack_arg(t_stack *stack, char **arg);
-int		check_duplicate(t_stack *stack);
 void	ft_normalizes(t_stack *stack);
 void	print_arraya(t_stack *stack);
 void	print_arrayb(t_stack *stack);
 void	print_arrayk(t_stack *stack);
+
+int check_error(int ac, char *av[]);
+int	check_duplicate(t_stack *stack);
+int	ft_check_int(char *str);
+int	ft_check_sign(char *str);
+long	ft_atol(const char *str);
 
 int		nb_minb(t_stack *stack);
 int		nb_maxb(t_stack *stack);

@@ -3,35 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/10 09:49:54 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/10 11:11:30 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/*Check if there is a duplicate in stack A*/
-
-int	check_duplicate(t_stack *stack)
-{
-	int	i;
-	int	j;
-
-	i = -1;
-	while (++i <= stack->size_a)
-	{
-		j = i + 1;
-		while (j <= stack->size_a)
-		{	
-			if (stack->a[i] == stack->a[j])
-				return (1);
-			j++;
-		}	
-	}
-	return (0);
-}
 
 /* Normalizes the numbers before sort them*/
 
@@ -96,6 +75,36 @@ void	create_stack_arg(t_stack *stack, char **arg)
 	while (++i <= stack->size_a)
 		stack->a[i] = ft_atoi(arg[i + 1]);	
 	ft_normalizes(stack);
+}
+
+/*Atoi but with long -> AtoL*/
+
+long	ft_atol(const char *str)
+{
+	int		i;
+	int		sign;
+	long	nb;
+
+	i = 0;
+	sign = 1;
+	nb = 0;
+	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+		i++;
+	if (str[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	else if (str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = ((nb * 10) + (str[i] - 48));
+		i++;
+	}
+	nb = nb * sign;
+	return (nb);
 }
 
 
