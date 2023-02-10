@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/10 16:33:58 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/10 17:21:11 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int ac, char **av)
+int main(int ac, char **av) 
 {
 	t_stack stack;
-	if (ac == 1 || av[1] == NULL)
+	if (ac == 1 || av[1][0] == '\0')
 		return (0);
 	stack.size_a = sizeA(av);
 	if (ac == 2)
@@ -40,6 +40,8 @@ int main(int ac, char **av)
 		ft_putstr_fd("Error\n", 2);
 		free (stack.a);
 		free (stack.b);
+		if (ac == 2)
+			free_av(av);
 		return (0);
 	}
 	if (stack.size_a == 2)
