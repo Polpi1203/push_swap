@@ -3,30 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   toolsA.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:52:35 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/09 18:25:07 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/10 15:52:48 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*forget the number of number for one argument*/
+/*forget the number of number for > 1 arguments*/
 
-int	size_str(char *str)
+int	sizeA(char **av)
 {
 	int	i;
-	int	count;
 
-	i = -1;
-	count = 0;
-	while (str[++i])
-	{
-		if (str[i] == 32)
-			count++;
-	}
-	return (count);
+	i = 0;
+	while (av[i])
+		i++;
+	return (i - 2);
+}
+
+/*forget the number of number for 1 arguments*/
+
+int	sizeA_arg_one(char **av)
+{
+	int	i;
+
+	i = 0;
+	while (av[i])
+		i++;
+	return (i - 1);
 }
 
 /*Forget the max number*/

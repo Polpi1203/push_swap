@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   func5.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:55 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/09 18:12:14 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/10 14:28:29 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*Sort list for 5 nbr*/
-
 void	sort_5_nbr(t_stack *stack)
 {
 	little_3_nb(stack);

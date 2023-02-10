@@ -28,8 +28,10 @@ all: $(NAME)
 
 clean:
 		@rm -rf $(OBJECTS)
+		@make -C ft_printf clean
+
 
 fclean: clean
-		@rm -rf $(NAME)
+		@rm -rf $(NAME) ft_printf/libftprintf.a
 
 re: fclean all

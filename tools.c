@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/10 11:11:30 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/10 16:28:20 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	ft_normalizes(t_stack *stack)
 
 int def_value(t_stack *stack)
 {
-	stack->result = malloc(sizeof(char *) * (stack->size_a + 1));
 	stack->a = malloc(sizeof(int) * (stack->size_a));
 	stack->b = malloc(sizeof(int) * (stack->size_a));
 	stack->inter = malloc(sizeof(int) * (stack->size_a));
@@ -54,29 +53,34 @@ int def_value(t_stack *stack)
 
 /*Creat the stack if there is only one argument*/
 
-void	create_stack_str(t_stack *stack, char *str)
-{
-	int		index;
+// void	create_stack_str(t_stack *stack, char *str)
+// {
+// 	int		index;
 
-	index = -1;
-	stack->result = ft_split(str, 32);
-	while (stack->result[++index] != 0)
-		stack->a[index] = ft_atoi(stack->result[index]);
-	ft_normalizes(stack);
-}
+// 	index = -1;
+// 	while (stack->result[++index] != 0)
+// 		stack->a[index] = ft_atoi(stack->result[index]);
+// 	ft_normalizes(stack);
+// }
 
-/*Creat the stack if there is several arguments*/
 
-void	create_stack_arg(t_stack *stack, char **arg)
+/*Creat the stack*/
+
+void	create_stack(t_stack *stack, char **arg, int ac)
 {
 	int i;
 
 	i = -1;
-	while (++i <= stack->size_a)
-		stack->a[i] = ft_atoi(arg[i + 1]);	
-	ft_normalizes(stack);
-}
+	if (ac == 2)
+	{
+		while (++i <= stack->size_a)
+			stack->a[i] = ft_atoi(arg[i]);	
+	}
+	else
+		while (++i <= stack->size_a)
+			stack->a[i] = ft_atoi(arg[i+1]);	
 
+}
 /*Atoi but with long -> AtoL*/
 
 long	ft_atol(const char *str)

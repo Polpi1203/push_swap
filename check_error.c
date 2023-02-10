@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_error.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 10:47:55 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/10 14:09:53 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/10 16:32:52 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	check_duplicate(t_stack *stack)
 	i = -1;
 	while (++i <= stack->size_a)
 	{
-		j = i + 1;
+		j = 1 + i;
 		while (j <= stack->size_a)
 		{	
 			if (stack->a[i] == stack->a[j])
