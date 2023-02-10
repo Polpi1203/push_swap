@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/10 13:40:52 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/10 14:10:53 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int check_error(int ac, char *av[]);
 int	check_duplicate(t_stack *stack);
 int	ft_check_int(char *str);
 int	ft_check_sign(char *str);
+int	free_av(char *argv[]);
 long	ft_atol(const char *str);
 
 int		nb_minb(t_stack *stack);

@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 10:47:55 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/10 13:57:22 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/10 14:09:53 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,21 @@ int	ft_check_sign(char *str)
 {
 	if (str[0] == '-' || str[0] == '+')
 		return (1);
+	return (0);
+}
+
+/*Free av*/
+
+int	free_av(char *av[])
+{
+	int	i;
+
+	i = 0;
+	while (av[i])
+	{
+		free(av[i]);
+		i++;
+	}
+	free(av);
 	return (0);
 }

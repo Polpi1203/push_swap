@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/10 13:58:22 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/10 14:10:49 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int main(int ac, char **av)
 	if(check_error(ac, av) == 0)
 	{
 		ft_putstr_fd("Error\n", 2);
+		if (ac == 2)
+			free_av(av);
 		return (0);
 	}
 	if (ac == 2)
@@ -50,6 +52,8 @@ int main(int ac, char **av)
 		big_func(&stack);
 		print_arraya(&stack);
 	}
+	if (ac == 2)
+		free_av(av);
 	free (stack.a);
 	free (stack.b);
 }
