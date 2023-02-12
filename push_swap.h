@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/10 19:17:48 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/12 09:27:55 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		sizeA(char **av);
 int		sizeA_arg_one(char **av);
 int		nb_max(t_stack *stack);
 int		nb_min(t_stack *stack);	
-void	little_3_nb(t_stack *stack);
+void	little_3_nb(t_stack *stack, int nb);
 int 	def_value(t_stack *stack);
 void	create_stack(t_stack *stack, char **arg, int ac);
 void	ft_normalizes(t_stack *stack);

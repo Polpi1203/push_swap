@@ -13,11 +13,12 @@ SOURCES = push_swap.c \
 			toolsB.c \
 			funcR_Rotate.c \
 			sort_3.c \
-			sort_4.c
+			sort_4.c \
 			sort_5.c \
 			func35.c \
 			sort_big.c \
 			check_error.c \
+
 
 OBJECTS = $(SOURCES:.c=.o)
 

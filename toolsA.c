@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   toolsA.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:52:35 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/10 15:52:48 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/12 10:06:28 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int	nb_min(t_stack *stack)
 
 /*Put the 3 smallest number at the beginning to K*/
 
-void	little_3_nb(t_stack *stack)
+void	little_3_nb(t_stack *stack, int nb)
 {	
 	int	i;
 	int	j;
@@ -82,13 +82,13 @@ void	little_3_nb(t_stack *stack)
 
 	i = -1;
 	stack->k = malloc(sizeof(int) * stack->size_a);
-	while (++i < 5)
+	while (++i < nb)
 		stack->k[i] = stack->a[i];
 	j = -1;
-	while (++j < 5)
+	while (++j < nb)
 	{
 		i = -1;
-		while (++i < 4)
+		while (++i < nb-1)
 		{
 			if (stack->k[i] > stack->k[i + 1])
 			{
@@ -99,12 +99,3 @@ void	little_3_nb(t_stack *stack)
 		}
 	}	
 }
-
-/*
-int main(void)
-{
-	char	*str = "Je vais a la piscine";
-
-	printf("%d", count_space(str));
-}
-*/

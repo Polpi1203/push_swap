@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/10 16:28:20 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/12 09:27:50 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,6 @@ int def_value(t_stack *stack)
 		return (0);
 	return (0);
 }
-
-/*Creat the stack if there is only one argument*/
-
-// void	create_stack_str(t_stack *stack, char *str)
-// {
-// 	int		index;
-
-// 	index = -1;
-// 	while (stack->result[++index] != 0)
-// 		stack->a[index] = ft_atoi(stack->result[index]);
-// 	ft_normalizes(stack);
-// }
-
 
 /*Creat the stack*/
 
@@ -121,7 +108,7 @@ void	print_arraya(t_stack *stack)
 		ft_printf("%d, ", stack->a[i]);
 	write (1, "\n", 1);
 }
-/*
+
 void	print_arrayb(t_stack *stack)
 {
 	int	i;
@@ -141,4 +128,3 @@ void	print_arrayk(t_stack *stack)
 		ft_printf("%d", stack->k[i]);
 	write (1, "\n", 1);
 }
-*/
