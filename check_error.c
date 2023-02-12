@@ -6,14 +6,14 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 10:47:55 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/12 13:29:03 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/12 14:44:36 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*Check all error case*/
-int check_error(int ac, char *av[])
+int	check_error(int ac, char *av[])
 {
 	int	i;
 	int	j;
@@ -70,26 +70,6 @@ int	check_duplicate(int ac, char *av[])
 	return (1);
 }
 
-/*
-int	check_duplicate(t_stack *stack)
-{
-	int	i;
-	int	j;
-
-	i = -1;
-	while (++i <= stack->size_a)
-	{
-		j = 1 + i;
-		while (j <= stack->size_a)
-		{	
-			if (stack->a[i] == stack->a[j])
-				return (0);
-			j++;
-		}	
-	}
-	return (1);
-}
-*/
 /*Check if all numbers are int*/
 
 int	ft_check_int(char *str)

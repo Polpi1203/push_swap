@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/12 14:00:28 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/12 14:37:59 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_normalizes(t_stack *stack)
 
 /*Malloc all*/
 
-int def_value(t_stack *stack)
+int	def_value(t_stack *stack)
 {
 	stack->a = malloc(sizeof(int) * (stack->size_a));
 	stack->b = malloc(sizeof(int) * (stack->size_a));
@@ -55,7 +55,7 @@ int def_value(t_stack *stack)
 
 void	create_stack(t_stack *stack, char **arg, int ac)
 {
-	int i;
+	int	i;
 
 	i = -1;
 	if (ac == 2)
@@ -67,7 +67,7 @@ void	create_stack(t_stack *stack, char **arg, int ac)
 	}
 	else
 		while (++i <= stack->size_a)
-			stack->a[i] = ft_atoi(arg[i+1]);
+			stack->a[i] = ft_atoi(arg[i + 1]);
 }
 
 /*Atoi but with long -> AtoL*/
@@ -100,7 +100,7 @@ long	ft_atol(const char *str)
 	return (nb);
 }
 
-
+/*
 void	print_arraya(t_stack *stack)
 {
 	int	i;
@@ -130,3 +130,4 @@ void	print_arrayk(t_stack *stack)
 		ft_printf("%d", stack->k[i]);
 	write (1, "\n", 1);
 }
+*/

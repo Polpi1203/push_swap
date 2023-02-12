@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:52:35 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/12 13:44:05 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/12 14:42:17 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*forget the number of number for > 1 arguments*/
 
-int	sizeA(char **av)
+int	size_a(char **av)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	sizeA(char **av)
 
 /*forget the number of number for 1 arguments*/
 
-int	sizeA_arg_one(char **av)
+int	sizea_arg_one(char **av)
 {
 	int	i;
 
@@ -90,7 +90,7 @@ void	little_3_nb(t_stack *stack, int nb)
 	while (++j < nb)
 	{
 		i = -1;
-		while (++i < nb-1)
+		while (++i < nb - 1)
 		{
 			if (stack->k[i] > stack->k[i + 1])
 			{

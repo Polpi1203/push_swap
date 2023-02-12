@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:43:04 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/09 18:19:18 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/12 14:43:46 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	func_rrb(t_stack *stack)
 	int	stock_first;
 	int	inter;
 
-	//stack->size_b--;
 	i = stack->size_b + 1;
 	stock_first = stack->b[0];
 	stack->b[0] = stack->b[stack->size_b];

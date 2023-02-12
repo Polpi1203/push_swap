@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:55 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/12 13:59:17 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/12 14:38:30 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	sort_5_nbr(t_stack *stack)
 {
 	if (sorted_list(stack) == 1)
-        return (0);
+		return (0);
 	little_3_nb(stack, 5);
 	pushk_to_b(stack);
 	stack->size_b--;
