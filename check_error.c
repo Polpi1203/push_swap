@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 10:47:55 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/10 17:20:24 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/12 13:29:03 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,34 @@ int check_error(int ac, char *av[])
 
 /*Check if there is a duplicate in stack A*/
 
+int	check_duplicate(int ac, char *av[])
+{
+	int	i;
+	int	j;
+	int	add;
+
+	i = 1;
+	if (ac == 2)
+		i = 0;
+	j = i;
+	while (av[i])
+		i++;
+	i--;
+	while (j < i)
+	{
+		add = 0;
+		while ((j + add) < i)
+		{
+			if (ft_atoi(av[j]) == ft_atoi(av[i - add]))
+				return (0);
+			add++;
+		}
+		j++;
+	}
+	return (1);
+}
+
+/*
 int	check_duplicate(t_stack *stack)
 {
 	int	i;
@@ -61,7 +89,7 @@ int	check_duplicate(t_stack *stack)
 	}
 	return (1);
 }
-
+*/
 /*Check if all numbers are int*/
 
 int	ft_check_int(char *str)

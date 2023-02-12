@@ -6,15 +6,17 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:55 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/12 09:27:56 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/12 13:59:17 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 /*Sort list for 5 nbr*/
-void	sort_5_nbr(t_stack *stack)
+int	sort_5_nbr(t_stack *stack)
 {
+	if (sorted_list(stack) == 1)
+        return (0);
 	little_3_nb(stack, 5);
 	pushk_to_b(stack);
 	stack->size_b--;
@@ -25,4 +27,5 @@ void	sort_5_nbr(t_stack *stack)
 	func_pa(stack);
 	func_pa(stack);
 	free (stack->k);
+	return (1);
 }

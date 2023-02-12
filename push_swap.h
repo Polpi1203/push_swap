@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/12 09:27:55 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/12 13:59:33 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	print_arrayb(t_stack *stack);
 void	print_arrayk(t_stack *stack);
 
 int check_error(int ac, char *av[]);
-int	check_duplicate(t_stack *stack);
+int	check_duplicate(int ac, char *av[]);
 int	ft_check_int(char *str);
 int	ft_check_sign(char *str);
 int	free_av(char *argv[]);
@@ -73,8 +73,8 @@ void	func_pb(t_stack *stack);
 void	func_pa(t_stack *stack);
 
 void	sort_3_nbr(t_stack *stack);
-void    sort_4(t_stack *stack);
-void	sort_5_nbr(t_stack *stack);
+int	sort_4(t_stack *stack);
+int	sort_5_nbr(t_stack *stack);
 void	func_35(t_stack *stack);
 void	big_func(t_stack *stack);
 int		sorted_list(t_stack *stack);

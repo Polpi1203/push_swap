@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/12 09:27:50 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/12 14:00:28 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,13 +61,15 @@ void	create_stack(t_stack *stack, char **arg, int ac)
 	if (ac == 2)
 	{
 		while (++i <= stack->size_a)
-			stack->a[i] = ft_atoi(arg[i]);	
+		{
+			stack->a[i] = ft_atoi(arg[i]);
+		}
 	}
 	else
 		while (++i <= stack->size_a)
-			stack->a[i] = ft_atoi(arg[i+1]);	
-
+			stack->a[i] = ft_atoi(arg[i+1]);
 }
+
 /*Atoi but with long -> AtoL*/
 
 long	ft_atol(const char *str)
