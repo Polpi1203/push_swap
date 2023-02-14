@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/12 14:40:43 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/14 09:16:18 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	**change_av(char **av, t_stack *stack)
 {
 	av = ft_split(av[1], ' ');
-	stack->size_a = sizeA_arg_one(av);
+	stack->size_a = sizea_arg_one(av);
 	return (av);
 }
 
@@ -54,7 +54,7 @@ int	main(int ac, char **av)
 {
 	t_stack	stack;
 
-	stack.size_a = sizeA(av);
+	stack.size_a = size_a(av);
 	if (ac == 1 || av[1][0] == '\0')
 		return (0);
 	if (ac == 2)
