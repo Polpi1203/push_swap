@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   toolsA.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:52:35 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/12 14:42:17 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/15 15:30:54 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,18 @@
 
 /*forget the number of number for > 1 arguments*/
 
-int	size_a(char **av)
+int	size_a(char **av, int ac)
 {
 	int	i;
 
 	i = 0;
 	while (av[i])
 		i++;
-	return (i - 2);
+	if (ac > 2)
+		i--;
+	return (i);
 }
 
-/*forget the number of number for 1 arguments*/
-
-int	sizea_arg_one(char **av)
-{
-	int	i;
-
-	i = 0;
-	while (av[i])
-		i++;
-	if (i == 1)
-		return (i);
-	return (i - 1);
-}
 
 /*Forget the max number*/
 
@@ -71,7 +60,7 @@ int	nb_min(t_stack *stack)
 			min = stack->a[i];
 		i++;
 	}
-	return (min);
+	return (min + 1);
 }
 
 /*Put the 3 smallest number at the beginning to K*/

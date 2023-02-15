@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   funcRotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 16:23:50 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/09 18:20:02 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/15 16:11:13 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	func_ra(t_stack *stack)
 
 	stock = stack->a[0];
 	i = -1;
-	while (++i <= stack->size_a - 1)
+	while (++i < stack->size_a - 1)
 		stack->a[i] = stack->a[i + 1];
 	stack->a[i] = stock;
 	stack->count++;

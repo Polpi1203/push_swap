@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   funcPush.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:25:04 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/09 18:16:34 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/15 16:02:02 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ void	func_pb(t_stack *stack)
 	inter = stack->a[0];
 	stack->size_a--;
 	stack->size_b++;
-	while (++i <= stack->size_a)
+	while (++i < stack->size_a)
 		stack->a[i] = stack->a[i + 1];
-	i = stack->size_b - 1;
+	i = stack->size_b;
 	while (i > 0)
 	{
 		stack->b[i] = stack->b[i - 1];

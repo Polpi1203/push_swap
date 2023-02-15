@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/12 14:41:47 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/15 13:56:07 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct s_stack
 	int		count;
 }	t_stack;
 
-int		size_a(char **av);
+int		size_a(char **av, int ac);
 int		sizea_arg_one(char **av);
 int		nb_max(t_stack *stack);
 int		nb_min(t_stack *stack);	
@@ -72,6 +72,7 @@ void	func_rrr(t_stack *stack);
 void	func_pb(t_stack *stack);
 void	func_pa(t_stack *stack);
 
+int	sort_2(t_stack *stack);
 void	sort_3_nbr(t_stack *stack);
 int		sort_4(t_stack *stack);
 int		sort_5_nbr(t_stack *stack);

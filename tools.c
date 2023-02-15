@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/12 14:37:59 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/15 15:49:29 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,19 @@ void	ft_normalizes(t_stack *stack)
 	int	count;
 
 	i = -1;
-	while (++i <= stack->size_a)
+	while (++i < stack->size_a)
 		stack->inter[i] = stack->a[i];
 	i = 0;
-	while (i <= stack->size_a)
+	while (i < stack->size_a)
 	{
 		j = -1;
 		count = -1;
-		while (++j <= stack->size_a)
+		while (++j < stack->size_a)
 		{
 			if (stack->inter[i] < stack->inter[j])
 				count++;
 		}
-		stack->a[i] = (stack->size_a - count);
+		stack->a[i] = ((stack->size_a - 1) - count);
 		i++;
 	}
 	free (stack->inter);
@@ -60,13 +60,13 @@ void	create_stack(t_stack *stack, char **arg, int ac)
 	i = -1;
 	if (ac == 2)
 	{
-		while (++i <= stack->size_a)
+		while (++i < stack->size_a)
 		{
 			stack->a[i] = ft_atoi(arg[i]);
 		}
 	}
 	else
-		while (++i <= stack->size_a)
+		while (++i < stack->size_a)
 			stack->a[i] = ft_atoi(arg[i + 1]);
 }
 
@@ -100,13 +100,13 @@ long	ft_atol(const char *str)
 	return (nb);
 }
 
-/*
+
 void	print_arraya(t_stack *stack)
 {
 	int	i;
 
 	i = -1;
-	while (++i < stack->size_a + 1)
+	while (++i < stack->size_a)
 		ft_printf("%d, ", stack->a[i]);
 	write (1, "\n", 1);
 }
@@ -130,4 +130,3 @@ void	print_arrayk(t_stack *stack)
 		ft_printf("%d", stack->k[i]);
 	write (1, "\n", 1);
 }
-*/

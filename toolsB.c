@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   toolsB.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:07:45 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/12 14:44:51 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/15 16:12:01 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	nb_minb(t_stack *stack)
 			min = stack->b[i];
 		i++;
 	}
-	return (min);
+	return (min + 1);
 }
 
 /*Push the 3 smallest number to B*/
@@ -55,7 +55,7 @@ void	pushk_to_b(t_stack *stack)
 	int	i;
 
 	i = 0;
-	while (i != 3)
+	while (i < 3)
 	{
 		if (stack->a[0] == stack->k[0] || stack->a[0] == stack->k[1]
 			|| stack->a[0] == stack->k[2])

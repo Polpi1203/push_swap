@@ -12,6 +12,7 @@ SOURCES = push_swap.c \
 			toolsA.c \
 			toolsB.c \
 			funcR_Rotate.c \
+			sort_2.c \
 			sort_3.c \
 			sort_4.c \
 			sort_5.c \

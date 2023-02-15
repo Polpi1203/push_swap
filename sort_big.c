@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_big.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 12:03:51 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/12 14:43:12 by polpi            ###   ########.fr       */
+/*   Updated: 2023/02/15 16:15:31 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	sorted_list(t_stack *stack)
 	i = 0;
 	if (stack->size_a > 1)
 	{
-		while (i < stack->size_a)
+		while (i < stack->size_a - 1)
 		{
 			if (stack->a[i] > stack->a[i + 1])
 				return (0);
@@ -53,7 +53,7 @@ void	big_func(t_stack *stack)
 	while (sorted_list(stack) == 0)
 	{
 		j = 0;
-		while (j <= inter)
+		while (j < inter)
 		{
 			j++;
 			if (topush(stack, i) == 1)

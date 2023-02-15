@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_5.c                                           :+:      :+:    :+:   */
+/*   sort_2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/14 11:32:55 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/15 16:11:18 by afaucher         ###   ########.fr       */
+/*   Created: 2023/02/15 13:06:23 by afaucher          #+#    #+#             */
+/*   Updated: 2023/02/15 14:09:40 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*Sort list for 5 nbr*/
-int	sort_5_nbr(t_stack *stack)
+int	sort_2(t_stack *stack)
 {
-	little_3_nb(stack, 5);
-	pushk_to_b(stack);
-	//stack->size_b--;
-	func_35(stack);
-	if (stack->a[0] > stack->a[1])
-		func_sa(stack);
-	func_pa(stack);
-	func_pa(stack);
-	func_pa(stack);
-	free (stack->k);
-	return (1);
+    if (sorted_list(stack) == 1)
+		return (0);
+    if (stack->a[0] > stack->a[1])
+        func_sa(stack);
+    return (1);
 }
