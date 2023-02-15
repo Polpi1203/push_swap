@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 11:29:08 by polpi             #+#    #+#             */
-/*   Updated: 2023/02/15 15:49:29 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:30:11 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ long	ft_atol(const char *str)
 	return (nb);
 }
 
-
+/*
 void	print_arraya(t_stack *stack)
 {
 	int	i;
@@ -130,3 +130,4 @@ void	print_arrayk(t_stack *stack)
 		ft_printf("%d", stack->k[i]);
 	write (1, "\n", 1);
 }
+*/

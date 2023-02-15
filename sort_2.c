@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 13:06:23 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/15 14:09:40 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:27:53 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	sort_2(t_stack *stack)
 {
-    if (sorted_list(stack) == 1)
+	if (sorted_list(stack) == 1)
 		return (0);
-    if (stack->a[0] > stack->a[1])
-        func_sa(stack);
-    return (1);
+	if (stack->a[0] > stack->a[1])
+		func_sa(stack);
+	return (1);
 }

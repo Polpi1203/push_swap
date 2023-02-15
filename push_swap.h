@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:01 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/15 13:56:07 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:26:59 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	func_rrr(t_stack *stack);
 void	func_pb(t_stack *stack);
 void	func_pa(t_stack *stack);
 
-int	sort_2(t_stack *stack);
+int		sort_2(t_stack *stack);
 void	sort_3_nbr(t_stack *stack);
 int		sort_4(t_stack *stack);
 int		sort_5_nbr(t_stack *stack);

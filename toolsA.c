@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:52:35 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/15 15:30:54 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:30:28 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	size_a(char **av, int ac)
 		i--;
 	return (i);
 }
-
 
 /*Forget the max number*/
 

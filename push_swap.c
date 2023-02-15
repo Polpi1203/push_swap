@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 11:32:19 by afaucher          #+#    #+#             */
-/*   Updated: 2023/02/15 16:12:14 by afaucher         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:26:26 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,19 @@ char	**change_av(char **av)
 {
 	av = ft_split(av[1], ' ');
 	return (av);
+}
+
+int	is_sorted(t_stack *stack, char **av, int ac)
+{
+	if (sorted_list(stack) == 1)
+	{
+		if (ac == 2)
+			free_av(av);
+		free (stack->a);
+		free (stack->b);
+		return (0);
+	}
+	return (1);
 }
 
 int	size_and_error(int ac, char **av)
@@ -65,14 +78,8 @@ int	main(int ac, char **av)
 	def_value(&stack);
 	create_stack(&stack, av, ac);
 	ft_normalizes(&stack);
-	if (sorted_list(&stack) == 1)
-	{
-		if (ac == 2)
-			free_av(av);
-		free (stack.a);
-		free (stack.b);
+	if (is_sorted(&stack, av, ac) == 0)
 		return (0);
-	}
 	stack.min = nb_min(&stack);
 	stack.max = nb_max(&stack);
 	choose_algo(&stack);
